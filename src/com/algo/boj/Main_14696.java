@@ -65,10 +65,9 @@ public class Main_14696 {
 					} else if (aArr[j] < bArr[j]) {
 						System.out.println("B");
 						break;
-					}else if(cnt == 3) {
+					} else if (cnt == 3) {
 						System.out.println("D");
-					}
-					else {
+					} else {
 						++cnt;
 					}
 				}
