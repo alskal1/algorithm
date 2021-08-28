@@ -16,16 +16,19 @@ public class Solution_1859 {
 		for (int t = 1; t <= T; t++) {
 			int N = sc.nextInt();
 			int mArr[] = new int[N];
-			int benefit = 0;
 			for (int n = 0; n < N; n++) {
 				mArr[n] = sc.nextInt();
 			}
 			int max = mArr[N - 1];
-			for (int i = N - 1; i >= 0; i--) {
+			long benefit = 0;
+			for (int i = N - 2; i >= 0; i--) {
 				if (mArr[i] < max) {
+					if (mArr[i] == 0) {
+						continue;
+					}
 					benefit += max - mArr[i];
 				} else {
-					max = Math.max(max, mArr[i]);
+					max = mArr[i];
 				}
 			}
 			System.out.println("#" + t + " " + benefit);
